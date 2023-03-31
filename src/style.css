@@ -1,4 +1,4 @@
-*{
+Ju*{
     color: white;
     margin: 0;
     padding: 0;
@@ -130,7 +130,7 @@ footer{
     bottom: 90px;
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (max-width: 600px){
  footer{
     position:absolute;
     bottom: 30px;

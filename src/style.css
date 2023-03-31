@@ -1,0 +1,134 @@
+*{
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body h1{
+    margin: 0 10px;
+    text-align: center;
+}
+
+#console{
+    padding: 8px;
+    width: 104px;
+    height: 104px;
+    text-align: center;
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 10%;
+}
+
+#console h1{
+    color: black;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #131720;
+}
+
+button{
+    background-color: purple;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: green;
+    color: white;
+}
+
+.ponto {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color:black;
+}
+
+.face-um {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.face-dois{
+    display: flex;
+    justify-content : space-between;
+}
+
+.face-dois .ponto:nth-of-type(2) {
+    align-self: flex-end;
+}
+.face-tres{
+    display: flex;
+    
+    justify-content : space-between;
+    }
+
+.face-tres .ponto:nth-of-type(2) {
+    align-self: center;
+}
+
+.face-tres .ponto:nth-of-type(3) {
+    align-self: flex-end;
+}
+
+.face-quatro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.face-quatro .coluna {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.face-cinco{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.face-cinco .coluna{
+    display: flex;
+    justify-content: space-between;
+}
+
+.face-cinco .coluna:nth-of-type(2) {
+    justify-content: center;
+}
+
+footer{
+    position:absolute;
+    bottom: 90px;
+}
+
+footer a{
+
+    font-weight: bolder;
+    border-radius: 35px;
+    padding: 5px 10px;
+    background-color: blueviolet;
+    text-decoration: none;
+}

@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style: none;
 }
 
 html{
@@ -17,21 +18,25 @@ html{
 body h1{
     margin: 0 10px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
-#console{
+#frame{
+    display: flex;
+}
+
+/* #console{
     padding: 8px;
     width: 104px;
     height: 104px;
     text-align: center;
     background-color: white;
-    margin: 20px 0;
     border-radius: 10%;
 }
 
 #console h1{
     color: black;
-}
+} */
 
 body{
     display: flex;
@@ -41,6 +46,7 @@ body{
 }
 
 button{
+    margin-top: 80px;
     background-color: purple;
     color: white;
     width: 200px;
@@ -57,7 +63,7 @@ button:hover{
     color: white;
 }
 
-.ponto {
+/* .ponto {
     display: block;
     width: 24px;
     height: 24px;
@@ -117,7 +123,7 @@ align-items: center;
 
 .face-cinco .coluna:nth-of-type(2) {
     justify-content: center;
-}
+} */
 
 footer{
     position:absolute;
@@ -131,4 +137,181 @@ footer a{
     padding: 5px 10px;
     background-color: blueviolet;
     text-decoration: none;
+}
+
+
+/* DICE */
+
+.dice {
+    
+}
+
+.die-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 104px;
+    list-style-type: none;
+    transform-style: preserve-3d;
+    width: 104px;
+    transition: transform .5s ease-out;
+}
+
+.die-item {
+    background-color: white;
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    grid-template-areas:
+        "one two three"
+        "four five six"
+        "seven eight nine";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 90px;
+        width: 90px;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    
+    .dot {
+        align-self: center;
+        background-color: black;
+        border-radius: 50%;
+        display: block;
+        height: 1rem;
+        justify-self: center;
+        width: 1rem;
+    }
+    
+    .die-list[data-roll="1"] {
+        transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
+    }
+    
+    .die-list[data-roll="2"] {
+        transform: rotateX(450deg) rotateY(720deg) rotateZ(360deg);
+    }
+    
+    .die-list[data-roll="3"] {
+        transform: rotateX(360deg) rotateY(630deg) rotateZ(360deg);
+    }
+    
+    .die-list[data-roll="4"] {
+        transform: rotateX(360deg) rotateY(810deg) rotateZ(360deg);
+    }
+    
+    .die-list[data-roll="5"] {
+        transform: rotateX(270deg) rotateY(720deg) rotateZ(360deg);
+    }
+
+.die-list[data-roll="6"] {
+    transform: rotateX(360deg) rotateY(900deg) rotateZ(360deg);
+}
+
+[data-side="1"] {
+    transform: rotate3d(0, 0, 0, 90deg) translateZ(4rem);
+}
+
+[data-side="2"] {
+    transform: rotate3d(-1, 0, 0, 90deg) translateZ(4rem);
+}
+
+[data-side="3"] {
+    transform: rotate3d(0, 1, 0, 90deg) translateZ(4rem);
+}
+
+[data-side="4"] {
+    transform: rotate3d(0, -1, 0, 90deg) translateZ(4rem);
+}
+
+[data-side="5"] {
+    transform: rotate3d(1, 0, 0, 90deg) translateZ(4rem);
+}
+
+[data-side="6"] {
+    transform: rotate3d(1, 0, 0, 180deg) translateZ(4rem);
+}
+
+[data-side="1"] .dot:nth-of-type(1) {
+    grid-area: five;
+}
+
+[data-side="2"] .dot:nth-of-type(1) {
+    grid-area: one;
+}
+
+[data-side="2"] .dot:nth-of-type(2) {
+    grid-area: nine;
+}
+
+[data-side="3"] .dot:nth-of-type(1) {
+    grid-area: one;
+}
+
+[data-side="3"] .dot:nth-of-type(2) {
+    grid-area: five;
+}
+
+[data-side="3"] .dot:nth-of-type(3) {
+    grid-area: nine;
+}
+
+[data-side="4"] .dot:nth-of-type(1) {
+    grid-area: one;
+}
+
+[data-side="4"] .dot:nth-of-type(2) {
+    grid-area: three;
+}
+
+[data-side="4"] .dot:nth-of-type(3) {
+    grid-area: seven;
+}
+
+[data-side="4"] .dot:nth-of-type(4) {
+    grid-area: nine;
+}
+
+[data-side="5"] .dot:nth-of-type(1) {
+    grid-area: one;
+}
+
+[data-side="5"] .dot:nth-of-type(2) {
+    grid-area: three;
+}
+
+[data-side="5"] .dot:nth-of-type(3) {
+    grid-area: five;
+}
+
+[data-side="5"] .dot:nth-of-type(4) {
+    grid-area: seven;
+}
+
+[data-side="5"] .dot:nth-of-type(5) {
+    grid-area: nine;
+}
+
+[data-side="6"] .dot:nth-of-type(1) {
+    grid-area: one;
+}
+
+[data-side="6"] .dot:nth-of-type(2) {
+    grid-area: three;
+}
+
+[data-side="6"] .dot:nth-of-type(3) {
+    grid-area: four;
+}
+
+[data-side="6"] .dot:nth-of-type(4) {
+    grid-area: six;
+}
+
+[data-side="6"] .dot:nth-of-type(5) {
+    grid-area: seven;
+}
+
+[data-side="6"] .dot:nth-of-type(6) {
+    grid-area: nine;
 }

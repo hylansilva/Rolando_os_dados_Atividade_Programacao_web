@@ -141,11 +141,6 @@ footer a{
 
 
 /* DICE */
-
-.dice {
-    
-}
-
 .die-list {
     display: grid;
     grid-template-columns: 1fr;

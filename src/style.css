@@ -1,4 +1,4 @@
-*{
+Ju*{
     color: white;
     margin: 0;
     padding: 0;
@@ -128,6 +128,13 @@ align-items: center;
 footer{
     position:absolute;
     bottom: 90px;
+}
+
+@media only screen and (max-width: 600px){
+ footer{
+    position:absolute;
+    bottom: 30px;
+ }
 }
 
 footer a{
